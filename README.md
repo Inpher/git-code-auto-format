@@ -2,17 +2,23 @@ git-hooks-code-autoformat
 =========================
 
 A collection of git `pre-commit` hooks to help with code auto-formatting.
+This will auto format the code just before any git commit locally on the
+machine. The formatting for Java is following Google coding standard except that
+identation is of 4 spaces.
 
-Licensed under [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
-
-Please, share your own formatters back. PRs are welcome!
+OS X
+----
+To make this work on OS X please install GNU SED:
+```
+brew install gnu-sed
+```
 
 How to use
 ----------
 You could just copy contents of this repo to `$PROJECT/.git/hooks/`. However, a slightly better way might be:
 
 1. `$ cd $PROJECT`
-1. `$ git remote add git-hooks-code-autoformat https://github.com/michalrus/git-hooks-code-autoformat.git`
+1. `$ git remote add git-hooks-code-autoformat https://github.com/Inpher/git-code-auto-format.git
 1. `$ git subtree add --prefix=git-hooks/ git-hooks-code-autoformat master`
 
 Now, you have `$PROJECT/git-hooks/` directory with contents of this repo. This subtree is updateable with `$ git subtree pull --prefix=git-hooks/ git-hooks-code-autoformat master`. Any person can just clone your project and they'll have `$PROJECT/git-hooks` in place at the very moment.
