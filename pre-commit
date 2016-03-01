@@ -3,7 +3,7 @@
 if [ $(uname) == "Darwin" ]; then
     EXEC="-perm +0111"
 else
-    EXEC="-executalbe"
+    EXEC="-executable"
 fi
 
 root="$(git rev-parse --show-toplevel)"
