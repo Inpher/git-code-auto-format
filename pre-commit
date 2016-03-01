@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ $(uname) == "Darwin" ]; then
     EXEC="-perm +0111"
